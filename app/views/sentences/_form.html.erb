@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @image) %>
+
+<%= form_for [@image, @sentence] do |f| %>
+<%= f.label :text %>
+<%= f.text_field :text %>
+<%= f.label :user_name %>
+<%= f.text_field :user_name %>
+<p><%= f.submit %></p>
+<% end %>
