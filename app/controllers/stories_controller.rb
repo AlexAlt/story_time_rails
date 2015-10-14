@@ -7,7 +7,8 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    # @image = @story.images.new(image_params)
+    @image = @story.images.new
+    @images = @story.images
     render :show
   end
 
@@ -20,7 +21,6 @@ class StoriesController < ApplicationController
       flash[:alert] = "Failed."
     end
   end
-
   private
   def story_params
     params.require(:story).permit(:title)

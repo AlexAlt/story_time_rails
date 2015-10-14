@@ -1,6 +1,7 @@
-<!-- <h1>Welcome to the journey of your life.</h1>
-<h2>be open..... be freeee......</h2>
-<h3><%= @story.title %></h3>
-<p><a href="<%=@image.image%>"></a></p>
 
-<%= render 'form' %> -->
+<h3><%= @story.title %></h3>
+<% @images.each do |image| %>
+  <%= image_tag image.image %>
+<%end%>
+
+<%= render 'images/form' %>
