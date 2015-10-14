@@ -8,6 +8,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.3.5'
+
 
 group :development do
   gem 'byebug'

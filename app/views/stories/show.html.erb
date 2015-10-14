@@ -1,7 +1,7 @@
 
 <h3><%= @story.title %></h3>
-<% @images.each do |image| %>
-  <%= image_tag image.image %>
-<%end%>
+
+<%= link_to "Find yourself", story_images_path(@story) %>
+<hr>
 
 <%= render 'images/form' %>

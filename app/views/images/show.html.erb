@@ -1,0 +1,9 @@
+
+<%= image_tag @image.image(:medium) %>
+<br>
+
+<div class="pull-left">
+<%= link_to raw("<i class='fa fa-trash-o'></i>"), story_image_path(@story, @image),
+:data => {:confirm => "Are you sure?",
+  :method => "delete"} %>
+</div>
