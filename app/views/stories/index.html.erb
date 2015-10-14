@@ -1,0 +1,10 @@
+<h1>This is the story of your life, don't f**k it up.</h1>
+
+<% if @stories.any? %>
+  <% @stories.each do |story| %>
+    <%= link_to story.title, story_path(story)%>
+  <% end %>
+<% else %>
+  <h3>No Stories Yet</h3>
+<% end %>
+<%= render 'form' %>
