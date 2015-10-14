@@ -15,9 +15,10 @@ class ImagesController < ApplicationController
     @image = @story.images.new(image_params)
     if @image.save
       redirect_to story_path(@image.story)
+      flash[:notice] = "You did it!!!"
     else
-      redirect_to story_path(@story)
-      flash[:alert] = "Failed."
+      redirect_to story_path(@image.story)
+      flash[:alert] = "Please attach a file"
     end
   end
 
@@ -31,6 +32,6 @@ class ImagesController < ApplicationController
 
   private
   def image_params
-    params.require(:image).permit(:image)
+    params.require(:image).permit! if params[:image]
   end
 end

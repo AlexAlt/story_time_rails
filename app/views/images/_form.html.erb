@@ -1,3 +1,5 @@
+<%= render('layouts/errors', :object => @image) %>
+
 <%= form_for [@story, @image], url: story_images_path(@story), html: {multipart: true} do |f| %>
 <%= f.file_field :image %>
 <%= f.submit %>
