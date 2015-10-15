@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014222528) do
+ActiveRecord::Schema.define(version: 20151015164124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "images", force: :cascade do |t|
     t.string   "image"
-    t.integer  "sentence_id"
     t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,7 +30,6 @@ ActiveRecord::Schema.define(version: 20151014222528) do
   create_table "sentences", force: :cascade do |t|
     t.string   "text"
     t.string   "user_name"
-    t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "image_id"
@@ -41,8 +39,6 @@ ActiveRecord::Schema.define(version: 20151014222528) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sentence_id"
-    t.integer  "image_id"
   end
 
 end

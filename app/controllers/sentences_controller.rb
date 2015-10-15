@@ -2,14 +2,14 @@ class SentencesController < ApplicationController
   def index
     @image = Image.find(params[:image_id])
     @sentences = @image.sentences
-    @sentence = Sentence.new
+    @sentence =  @image.sentences.new
   end
 
   def create
     @image = Image.find(params[:image_id])
-    @sentence = Sentence.new(sentence_params)
+    @sentence = @image.sentences.new(sentence_params)
     if @sentence.save
-      redirect_to image_sentences_path(@image)
+      redirect_to story_path(@image.story_id)
     else
       redirect_to image_sentences_path(@image)
     end

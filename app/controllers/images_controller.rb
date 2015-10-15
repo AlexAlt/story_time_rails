@@ -14,6 +14,7 @@ class ImagesController < ApplicationController
     @story = Story.find(params[:story_id])
     @image = @story.images.new(image_params)
     if @image.save
+      @story.save
       redirect_to story_path(@image.story)
       flash[:notice] = "You did it!!!"
     else

@@ -1,5 +1,17 @@
 
 <h3><%= @story.title %></h3>
+<% if @story.images.any? %>
+  <ul class="list-unstyled">
+    <% @story.images.each do |image| %>
+      <% image.sentences.each do |sentence| %>
+        <li><%= sentence.text %></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Add to this tale!!</p>
+<% end %>
+
 
 <%= link_to "Find yourself", story_images_path(@story) %>
 <hr>
