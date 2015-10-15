@@ -2,7 +2,8 @@ class ImagesController < ApplicationController
 
   def index
     @story = Story.find(params[:story_id])
-    @images = @story.images
+    number = rand(0..@story.images.length)
+    @image = @story.images.find_by number: number
   end
 
   def show
@@ -33,6 +34,6 @@ class ImagesController < ApplicationController
 
   private
   def image_params
-    params.require(:image).permit! if params[:image]
+    params.require(:image).permit! if params[:image] || params[:number]
   end
 end

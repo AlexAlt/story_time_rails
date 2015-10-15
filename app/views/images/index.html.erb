@@ -1,10 +1,8 @@
-<% if @story.images.any? %>
-  <% @images.each do |image| %>
-  <%= image_tag image.image(:medium) %>
-  <br>
-  <%= link_to "Explore your inspiration", story_image_path(@story, image)%>
-  <hr>
-  <% end %>
-<% else %>
-  <h4>No images</h4>
-<% end %>
+<h3>Choose a picture that inspires you</h3>
+
+
+
+<%= image_tag @image.image(:medium) %>
+<br>
+<%= link_to "Explore your inspiration", story_image_path(@story, @image)%>
+<hr>
