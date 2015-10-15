@@ -2,10 +2,8 @@
 <h3><%= @story.title %></h3>
 <% if @story.images.any? %>
   <ul class="list-unstyled">
-    <% @story.images.each do |image| %>
-      <% image.sentences.each do |sentence| %>
-        <li><%= sentence.text %></li>
-      <% end %>
+    <% @sentences.each do |sentence| %>
+      <li><%= sentence.text %></li>
     <% end %>
   </ul>
 <% else %>

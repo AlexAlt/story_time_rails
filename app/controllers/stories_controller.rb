@@ -8,6 +8,15 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @image = @story.images.new
+    images = @story.images
+    sentences = []
+    images.each do |image|
+      image.sentences.each do |sentence|
+        sentences.push(sentence)
+      end
+    end
+
+    @sentences = sentences.sort_by { |obj| obj.created_at }
     render :show
   end
 
