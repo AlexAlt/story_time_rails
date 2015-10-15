@@ -15,7 +15,6 @@ class StoriesController < ApplicationController
         sentences.push(sentence)
       end
     end
-
     @sentences = sentences.sort_by { |obj| obj.created_at }
     render :show
   end

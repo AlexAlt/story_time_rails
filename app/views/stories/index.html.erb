@@ -10,4 +10,30 @@
 <% else %>
   <h3>No Stories Yet</h3>
 <% end %>
-<%= render 'form' %>
+
+
+
+
+
+
+<!-- Button trigger modal -->
+<button class="btn btn-link" data-toggle="modal" data-target="#stories">
+  Create a New Story
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="stories" tabindex="-1" role="dialog" aria-labelledby="storyLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="story">Add Title</h4>
+      </div>
+      <div class="modal-body">
+        <%= render 'form' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
