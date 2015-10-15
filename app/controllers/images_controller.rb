@@ -13,7 +13,16 @@ class ImagesController < ApplicationController
 
   def create
     @story = Story.find(params[:story_id])
+
+    previous_number = @story.images.last.number
+    if previous_number
+      number = previous_number + 1
+    else
+      number = 0
+    end
+
     @image = @story.images.new(image_params)
+    @image.number = number
     if @image.save
       @story.save
       redirect_to story_path(@image.story)
@@ -34,6 +43,6 @@ class ImagesController < ApplicationController
 
   private
   def image_params
-    params.require(:image).permit! if params[:image] || params[:number]
+    params.require(:image).permit! if params[:image]
   end
 end

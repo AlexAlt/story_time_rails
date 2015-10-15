@@ -1,9 +1,6 @@
 <%= render('layouts/errors', :object => @image) %>
 
-
 <%= form_for [@story, @image], url: story_images_path(@story), html: {multipart: true} do |f| %>
 <%= f.file_field :image %>
-<%= f.label :number %>
-<%= f.text_field :number %>
 <button type="submit" class="btn btn-link pull-left image-button"><i class='fa fa-plus'></i></button>
 <% end %>

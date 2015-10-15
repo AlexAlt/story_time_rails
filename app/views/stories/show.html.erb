@@ -1,5 +1,5 @@
 
-<h3><%= @story.title %></h3>
+<h2><%= @story.title %></h2>
 <% if @story.images.any? %>
   <ul class="list-unstyled">
     <% @sentences.each do |sentence| %>
@@ -11,12 +11,12 @@
 <% end %>
 
 
-<%= link_to "Find yourself", story_images_path(@story) %>
+<%= link_to "Contribute", story_images_path(@story) %>
 <hr>
 
-<p class="image-label">
+<h4 class="image-label">
   Add an Image
-</p>
+</h4>
 <div class="submit-image">
   <%= render 'images/form' %>
 </div>
