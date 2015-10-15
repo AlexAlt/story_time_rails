@@ -1,0 +1,37 @@
+1) Fork the GitHub repo that you will be reviewing.
+2) Create a local clone of the repo from your fork.
+3) Create a new local branch called something like "peer_code_review_XXXX". "XXXX" can be you and your partner's initials or another unique identifier that will differentiate it from the other code review branch that another pair will be adding to the same repo.
+4) Create a text document in the project folder and copy the peer review questions below into it.
+
+
+5) As you review the code, add comments and questions in the code itself and offer more detailed comments in your text file. Make sure to answer all of the questions. Use constructive criticism for any areas of improvement.
+6) Commit your changes and push your branch to your GitHub fork.
+7) Submit a pull request to the original repo so that the authors can look over your review. 8) Return to your own project repository. You should be able to explore the peer code review provided by another team.
+
+Is there good spec coverage?
+- More specs would be nice.
+
+Do all specs pass?
+- There are no integration specs
+- One spec is failing. Sentences are not associated with stories (no story_id in sentence database).
+
+Is the Github documentation - commits and README - thorough and descriptive?
+- We were able to get the project running using the README.
+
+Is the application logic clear and easy to navigate?
+- The logic was easy to follow, but the image model was breaking the story-sentence relationship.
+
+Is the site user-friendly?
+- It looks very intuitive.
+
+Are there opportunities for refactoring?
+- Looked good to us.
+
+What features stand out?
+- Nice banner. The ability to upload photos is nice, but we couldn't get it to work.
+
+What features could be improved?
+- The model associations could be better connected.
+
+Do you have any additional constructive criticism or positive feedback to share?
+- Thanks for showing us your working site!
