@@ -4,4 +4,4 @@
 * `rake db:migrate`
 * `rake db:test:prepare`
 * `rails s`
- Don't f**k it up.
+* Don't f**k it up.
